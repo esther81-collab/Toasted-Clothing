@@ -25,6 +25,11 @@ The first time, the order service asks you to confirm your email by clicking one
 - `netlify.toml` defines the Netlify build and publish settings
 - `README.md` is this file
 
+## Product photos
+The uploaded jacket, colour-drop vest and orange two-piece photos are stored as separate JPEG files in `images/`, with phone interface and screenshot borders removed. The jacket gallery includes front, back and crew photos. The colour-drop vest has a group photo and individual colour crops, so its cart thumbnail matches the selected colour.
+
+Product photo paths are set in each product's `im` list and, for colour options, its `col` list. The cart uses these same photos automatically. Keep photos as separate files rather than embedding image data in the HTML so they can be loaded and cached independently.
+
 ## Deployment
 The site is standalone HTML, CSS and JavaScript and does not need a framework or any npm dependencies. Use Node.js 22 or later.
 
@@ -45,4 +50,3 @@ Open `index.html/toasted-store(3).html` in a text editor and find the list that 
 
 ## Delivery fee
 Delivery is free on orders of R1,500 or more, and R99 below that. To change this, find `const ship=` in `index.html/toasted-store(3).html` and edit the two numbers.
-
